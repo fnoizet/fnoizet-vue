@@ -6,51 +6,34 @@
     </div>
     <div class="aboutWrapper">
       <div class="aboutColumn">
-        <div class="aboutCell">
-          <div class="title">Qui suis-je</div>
-          <div class="text">{{ appDatas.description }}</div>
-          <div class="dots">
-            <ul>
-              <li v-for="dot in appDatas.descriptionDots" :key="dot">
-                {{ dot }}
-              </li>
-            </ul>
-          </div>
-        </div>
+        <AboutCell
+          title='Qui suis-je'
+          :description=appDatas.description
+          :dots=appDatas.descriptionDots
+        />
         <div class="mainTechnos"></div>
       </div>
       <div class="aboutColumn">
-        <div class="aboutCell">
-          <div class="title">Développeur</div>
-          <div class="text">{{ appDatas.descriptionDev }}</div>
-          <div class="dots">
-            <ul>
-              <li v-for="dot in appDatas.descriptionDevDots" :key="dot">
-                {{ dot }}
-              </li>
-            </ul>
-          </div>
-        </div>
+        <AboutCell
+          title='Développeur'
+          :description=appDatas.descriptionDev
+          :dots=appDatas.descriptionDevDots
+        />
         <div class="mainLibs"></div>
-        <div class="aboutCell">
-          <div class="title">Scrum Master</div>
-          <div class="text">{{ appDatas.descriptionSM }}</div>
-          <div class="dots">
-            <ul>
-              <li v-for="dot in appDatas.descriptionSMDots" :key="dot">
-                {{ dot }}
-              </li>
-            </ul>
-          </div>
-        </div>
+        <AboutCell
+          title="Scrum Master"
+          :description=appDatas.descriptionSM
+          :dots=appDatas.descriptionSMDots
+        />
       </div>
     </div>
   </div>
 </template>
 <script>
-// import { appDatas } from "@/assets/datas";
+import AboutCell from "./AboutCell.vue";
 export default {
   name: "AboutContent",
+  components: {AboutCell},
   inject: ["appDatas"],
   methods: {
     initBubbleAnimation() {
@@ -158,65 +141,6 @@ export default {
   width: 460px;
   height: 258px;
   background-image: url("../assets/main_technos.jpg");
-}
-
-.aboutCell {
-  position: relative;
-}
-
-.aboutCell .title {
-  font-size: 20px;
-  font-weight: bold;
-  border-left: 5px solid var(--primary);
-  padding-left: 5px;
-  margin-bottom: 20px;
-}
-
-.aboutCell .text,
-.aboutCell .dots {
-  font-size: 14px;
-  text-align: justify;
-}
-
-.aboutCell .dots ul {
-  border: 20px solid #fff;
-  position: absolute;
-  top: 38px;
-  height: calc(100% - 38px);
-  background-color: #fff;
-  width: 100%;
-
-  /*animation: dotsReveal 20s infinite linear;*/
-}
-
-.aboutCell .dots {
-  opacity: 0;
-}
-.aboutCell .dots:hover {
-  opacity: 1;
-}
-
-@keyframes dotsReveal {
-  0% {
-    opacity: 0;
-  }
-  25% {
-    opacity: 0;
-  }
-  26% {
-    opacity: 1;
-  }
-  74% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-
-
 }
 
 .aboutColumn .mainLibs {

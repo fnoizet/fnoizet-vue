@@ -1,21 +1,21 @@
 <template>
   <div class="appWrapper">
       <main-page />
-    <transition name="fadePresenting">
+    <!--<transition name="fadePresenting">
       <div class="welcomingWrapper" v-if="isPresenting" >
         <Welcoming @presented="hidePresenting"/>
       </div>
     </transition>
     <div class="loading" v-if="isLoading">
       <div class="loadingBar"></div>
-    </div>
+    </div>-->
   </div>
 </template>
 
 <script>
 import { appDatas } from "./assets/datas.js";
 import MainPage from "./components/MainPage.vue";
-import Welcoming from "./components/Welcoming.vue";
+// import Welcoming from "./components/Welcoming.vue";
 
 export default {
   name: "App",
@@ -32,7 +32,7 @@ export default {
   },
   components: {
     MainPage,
-    Welcoming
+    // Welcoming
   },
 
   methods: {
@@ -42,9 +42,6 @@ export default {
     hidePresenting() {
       this.isPresenting = false;
       window.cookieStore.set('hasVisited', 'true');
-    },
-    updateUIElementsWithScroll(e) {
-      console.log(e);
     }
   },
 
@@ -60,11 +57,6 @@ export default {
     }).catch((err) => {
       console.log(err);
     });
-
-    window.addEventListener('scroll', (e) => {
-      console.log(e);
-      //this.updateUIElementsWithScroll();
-    })
   }
 };
 </script>

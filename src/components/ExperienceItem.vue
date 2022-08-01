@@ -31,7 +31,7 @@ export default {
     background-color: var(--lightgray);
     box-shadow: 2px 2px 5px 1px #0003;
     width: calc(50% - 5px);
-    height: 150px;
+    height: 200px;
     font-size: 12px;
 }
 
