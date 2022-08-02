@@ -47,7 +47,7 @@ export default {
   position: fixed;
   top: 0;
   width: 100%;
-
+  z-index: 99;
   transition: all 0.2s ease-in-out;
 }
 

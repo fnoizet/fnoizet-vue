@@ -47,7 +47,7 @@ export default {
           2 * Math.random() +
           "s infinite; " +
           "left : " +
-          header.offsetWidth * Math.random() +
+          (header.offsetWidth - 15) * Math.random() +
           "px;" +
           "--finalRotation: " +
           Math.random() * 360 +

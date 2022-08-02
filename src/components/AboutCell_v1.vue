@@ -55,44 +55,49 @@ export default {
 .aboutCell .dots {
   font-size: 14px;
   text-align: justify;
-  transition: opacity 0.2s cubic-bezier(1, 0.005, 0, 1), transform 0.2s linear;
-}
-
-.aboutCell .dots {
-  position: absolute;
-  top: 40px;
-  width: 100%;
-  height: calc(100% - 38px);
 }
 
 .aboutCell .dots ul {
   border: 20px solid #fff;
-  height: 100%;
+  position: absolute;
+  top: 40px;
+  height: calc(100% - 38px);
   background-color: #fff;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   border-width: 0 20px;
-}
 
-.aboutCell .text {
-  transform: rotateY(0deg);
-  opacity: 1;
+  /*animation: dotsReveal 20s infinite linear;*/
 }
 
 .aboutCell .dots {
-  transform: rotateY(180deg);
   opacity: 0;
 }
-
-.aboutCell.revealDots .text {
-  transform: rotateY(180deg);
-  opacity: 0;
-}
-
+.aboutCell .dots:hover,
 .aboutCell.revealDots .dots {
-  transform: rotateY(0deg);
   opacity: 1;
+}
+
+@keyframes dotsReveal {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  26% {
+    opacity: 1;
+  }
+  74% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 </style>

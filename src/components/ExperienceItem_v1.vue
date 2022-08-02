@@ -3,6 +3,12 @@
         <div class="companyLogo" :style="this.style">
             <img :src="this.picture">
         </div>
+        <div class="descriptionWrapper">
+            <div class="jobTitle">{{datas.job}}</div>
+            <div class="company">{{datas.company}}</div>
+            <div class="date">{{datas.date}}</div>
+            <div class="description">{{datas.desc2}}</div>
+        </div>
     </div>
 </template>
 <script>
@@ -21,28 +27,26 @@ export default {
 .experienceItem {
     display: flex;
     flex-direction: row;
-    width: 33.3%;
-    aspect-ratio: 1;
+    background-color: var(--lightgray);
+    box-shadow: 2px 2px 5px 1px #0003;
+    width: calc(50% - 5px);
+    height: 200px;
     font-size: 12px;
-    cursor: pointer;
-    filter: grayscale(100%);
-    transition: filter 0.2s linear;
 }
 
-.experienceItem:hover {
-    filter: grayscale(0%);
-}
 
 .experienceItem .companyLogo {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    width: 200px;
     height: 100%;
     background-color: var(--companyColor);
 }
 
 .companyLogo img {
-    width: 100%;
+    width: 200px;
+    height: 100px;
 }
 
 .descriptionWrapper {

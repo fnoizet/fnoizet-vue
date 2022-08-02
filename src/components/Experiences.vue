@@ -28,7 +28,6 @@ export default {
 .experienceWrapper {
     width: 1000px;
     display: flex;
-    gap: 10px;
     flex-wrap: wrap;
 }
 </style>
