@@ -7,6 +7,7 @@
     <About />
     <Experiences />
     <Posts />
+    <Contact/>
   </div>
 </template>
 
@@ -16,9 +17,10 @@ import Home from "./Home.vue";
 import About from "./About.vue";
 import Experiences from "./Experiences.vue";
 import Posts from "./Posts.vue";
+import Contact from "./Contact.vue";
 
 export default {
-  components: { Menu, Home, About, Experiences, Posts },
+  components: { Menu, Home, About, Experiences, Posts, Contact },
   mounted: () => {
     const node = document.querySelector(".mainPage");
     node.addEventListener("scroll", () => {
@@ -29,6 +31,12 @@ export default {
         menuWrapper.classList.add("hidden");
       }
     });
+
+    if (window.location.hash) {
+      node.classList.add('directScroll');
+      node.scrollTo(0, document.querySelector(window.location.hash).offsetTop);
+      node.classList.remove('directScroll');
+    }
   },
 };
 </script>
@@ -43,11 +51,15 @@ export default {
   margin-right: -20px;
 }
 
+.directScroll {
+  scroll-behavior: auto !important;
+}
+
 .menuWrapper {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 99;
+  z-index: 5;
   transition: all 0.2s ease-in-out;
 }
 

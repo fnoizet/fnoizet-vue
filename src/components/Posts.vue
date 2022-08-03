@@ -1,5 +1,5 @@
 <template>
-    <div class="postWrapper" id="posts">
+    <div v-if="appDatas.displayPostComponents" class="postWrapper" id="posts">
         <div class="itemsWrapper">
             <PostItem v-for="work in this.workToShow" :key="work.code" :datas="work" class="post" />
         </div>

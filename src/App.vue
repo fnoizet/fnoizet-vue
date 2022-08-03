@@ -55,7 +55,7 @@ export default {
         this.showPresenting();
       }
     }).catch((err) => {
-      console.log(err);
+      console.error(err);
     });
   }
 };
@@ -91,6 +91,7 @@ body {
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-size: 14px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

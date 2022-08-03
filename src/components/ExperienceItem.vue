@@ -1,5 +1,5 @@
 <template>
-    <div class="experienceItem">
+    <div class="experienceItem" @click="$emit('selectItem', this.datas)">
         <div class="companyLogo" :style="this.style">
             <img :src="this.picture">
         </div>
@@ -9,6 +9,7 @@
 export default {
     name: "ExperienceItem",
     props: {datas: {}},
+    emits: ['selectItem'],
     computed: {
         style: function () {return "--companyColor:"+this.datas.bgcolor+";";},
         picture: function() {return require('../assets/'+this.datas.companyLogoPath);}
@@ -22,7 +23,7 @@ export default {
     display: flex;
     flex-direction: row;
     width: 33.3%;
-    aspect-ratio: 1;
+    aspect-ratio: 1.5;
     font-size: 12px;
     cursor: pointer;
     filter: grayscale(100%);

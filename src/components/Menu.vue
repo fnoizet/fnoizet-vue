@@ -4,20 +4,16 @@
       <a href="#home">Accueil</a>
       <a href="#about">A propos</a>
       <a href="#experiences">Expériences</a>
-      <a href="#posts">Posts</a>
+      <a href="#posts" v-if="appDatas.displayPostComponents">Posts</a>
       <a href="#contact">Contact</a>
     </nav>
-    <div class="socialLinks">
-      <a href="#"></a>
-      <a href="#"></a>
-    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: "LeftMenu",
-
+  inject: ['appDatas'],
   mounted() {},
 };
 </script>

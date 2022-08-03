@@ -1,8 +1,11 @@
 <template>
   <div class="aboutContent" id="about">
     <div class="aboutHeader">
+      <font-awesome-icon icon="fa-solid fa-circle-question" />
       A propos
-      <div v-for="index in 20" :key="index" class="bubble"></div>
+      <div v-for="index in 20" :key="index" class="bubble">
+        <font-awesome-icon icon="fa-solid fa-circle-question" />
+      </div>
     </div>
     <div class="aboutWrapper">
       <div class="aboutColumn">
@@ -80,14 +83,12 @@ export default {
   width: 1000px;
   height: 84px;
   line-height: 64px;
-  background: url("../assets/apropos.png") no-repeat;
-  padding-left: 74px;
   padding-bottom: 20px;
   position: relative;
   overflow: hidden;
 }
 
-.aboutHeader .bubble {
+.aboutHeader ._bubble {
   position: absolute;
 
   display: inline-block;
@@ -96,6 +97,14 @@ export default {
   border-right: 8px solid transparent;
   border-bottom: 15px solid var(--secondary);
   border-left: 8px solid transparent;
+  top: 84px;
+  opacity: 1;
+}
+
+.aboutHeader .bubble {
+  position: absolute;
+
+  display: inline-block;
   top: 84px;
   opacity: 1;
 }

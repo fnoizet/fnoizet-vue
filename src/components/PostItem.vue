@@ -15,8 +15,6 @@ export default {
         handleClick() {
             if(this.work.type === "website") {
                 window.open(this.datas.url, this.datas.targetUrl).focus();
-            } else {
-                console.log(this.datas);
             }
         },
     }

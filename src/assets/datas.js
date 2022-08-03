@@ -390,6 +390,7 @@ const appDatas = {
       ]
     }
   ],
+  displayPostComponents : false,
   work: [
     {
       code: "CustomCheckbox",
