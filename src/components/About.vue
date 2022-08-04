@@ -157,4 +157,34 @@ export default {
   height: 105px;
   background-image: url("../assets/main_libs.jpg");
 }
+
+@media screen and (max-width:800px) {
+  .aboutWrapper {
+    flex-direction: column;
+  }
+
+  .aboutHeader{
+    font-size: 30px;
+    width: 100%;
+    padding-left:20px;
+  }
+
+  .aboutColumn {
+    width: 100%;
+  }
+
+  .aboutColumn .mainTechnos {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 460/258;
+    background-size: contain;
+  }
+
+  .aboutColumn .mainLibs {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 460/105;
+    background-size: contain;
+  }
+}
 </style>

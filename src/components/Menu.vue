@@ -13,7 +13,7 @@
 <script>
 export default {
   name: "LeftMenu",
-  inject: ['appDatas'],
+  inject: ["appDatas"],
   mounted() {},
 };
 </script>
@@ -49,5 +49,19 @@ export default {
 
 .menu nav a:hover {
   color: var(--primary);
+}
+
+@media screen and (max-width: 800px) {
+  .menu {
+    margin: auto;
+    width: 100vh;
+    height: 60px;
+    line-height: 60px;
+  }
+
+  .menu nav a {
+    font-size:15px;
+    line-height:60px;
+  }
 }
 </style>

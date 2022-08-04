@@ -5,12 +5,12 @@
         <div v-for="index in 100" :key="index" class="bubble"></div>
       </div>
       <div class="photoZone"></div>
-      <div class="name">
-        <span class="firstname">Fabien</span>&nbsp;<span class="lastname"
-          >Noizet</span
-        >
+      <div class="textZone">
+        <div class="name">
+          <span class="firstname">Fabien</span> Noizet
+        </div>
+        <div class="title">Développeur / Scrum Master</div>
       </div>
-      <div class="title">Développeur / Scrum Master</div>
     </div>
     <a class="homeArrowDown" href="#about">
         <font-awesome-icon icon="fa-solid fa-circle-arrow-down" />
@@ -59,7 +59,7 @@ export default {
   padding-top: 166px;
 
   background-image: url("../assets/home_bg_triangles.png");
-
+  transition: all 0.5s linear;
   animation: homeVisualAnim 0.5s forwards;
 }
 
@@ -75,14 +75,19 @@ export default {
   }
 }
 
-.homeVisual .name {
+.homeVisual .textZone {
+  position: absolute;
+  top: 0;
+  left: 0; 
+  padding: 60px;
+}
+
+.textZone .name {
   font-family: Impact;
   margin-left: -1500px;
   font-size: 101px;
   color: #767676;
-
   animation: homeVisualNameAnim 0.5s forwards 0.2s;
-  position: absolute;
 }
 
 @keyframes homeVisualNameAnim {
@@ -95,11 +100,11 @@ export default {
   }
 }
 
-.homeVisual .name .firstname {
+.textZone .name .firstname {
   color: var(--primary);
 }
 
-.homeVisual .title {
+.textZone .title {
   font-family: verdana;
   font-size: 28px;
   color: var(--darkgray);
@@ -107,8 +112,7 @@ export default {
   margin-left: -1500px;
 
   animation: homeVisualNameAnim 0.5s forwards 0.4s;
-  position: absolute;
-  top: 60%;
+  
 }
 
 .homeVisual .violetZone {
@@ -118,6 +122,7 @@ export default {
   height: 100%;
   width: 100%;
   background-image: url("../assets/home_bg_violet.png");
+  background-size: cover;
   overflow: hidden;
 }
 
@@ -130,7 +135,7 @@ export default {
   border-right : 87px solid transparent;
   border-bottom : 150px solid var(--primary);
   border-left : 87px solid transparent;
-  top: 490px;
+  top: 100%;
   opacity: 1;
   mix-blend-mode: screen;
 }
@@ -138,7 +143,7 @@ export default {
 @keyframes bubbleUpHome{
   from {
     transform: rotate(0deg);
-    top: 490px;
+    top: 100%;
     opacity: 1;
   }
 
@@ -178,5 +183,46 @@ export default {
     to {
         opacity: 1;
     }
+}
+
+@media screen and (max-width: 800px) {
+  .homeContent {
+    display: block;
+    padding: 0 !important;
+  }
+
+  .homeVisual {
+    width: 100vw;
+    padding-top:40px;
+    margin-bottom: 20px;
+    height: calc(100vh - 150px) !important;
+  }
+
+  .homeVisual .textZone {
+    padding: 20px;
+
+  }
+
+  .textZone .name {
+    font-size: 51px;
+    word-break: wrap;
+    width: 50%;
+  }
+
+  .textZone .title {
+    font-size:15px;
+  }
+
+  .homeVisual .photoZone {
+    background-size: 50%;
+    background-position: right bottom;
+    height: 100%;
+    bottom: 0;
+    right: -20px;
+  }
+
+  .homeVisual .violetZone {
+    background-position: -564px 0;
+  }
 }
 </style>

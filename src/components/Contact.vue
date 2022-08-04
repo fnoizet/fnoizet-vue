@@ -63,4 +63,11 @@ export default {
 .contactWrapper a:hover {
     color: var(--secondary);
 }
+
+@media screen and (max-width: 800px) {
+  .contactWrapper {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
 </style>

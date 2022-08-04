@@ -56,4 +56,14 @@ export default {
     font-size: 20px;
     font-weight: bold;
 }
+
+@media screen and (max-width: 800px) {
+    .experienceItem {
+        width: 50%;
+        aspect-ratio: 1;
+        filter: none;
+    }
+
+    
+}
 </style>

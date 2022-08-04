@@ -1,30 +1,15 @@
 <template>
   <div class="appWrapper">
       <main-page />
-    <!--<transition name="fadePresenting">
-      <div class="welcomingWrapper" v-if="isPresenting" >
-        <Welcoming @presented="hidePresenting"/>
-      </div>
-    </transition>
-    <div class="loading" v-if="isLoading">
-      <div class="loadingBar"></div>
-    </div>-->
   </div>
 </template>
 
 <script>
 import { appDatas } from "./assets/datas.js";
 import MainPage from "./components/MainPage.vue";
-// import Welcoming from "./components/Welcoming.vue";
 
 export default {
   name: "App",
-  data: () => {
-    return {
-      isLoading: true,
-      isPresenting: false,
-    };
-  },
   provide() {
     return {
       appDatas,
@@ -32,31 +17,16 @@ export default {
   },
   components: {
     MainPage,
-    // Welcoming
-  },
-
-  methods: {
-    showPresenting() {
-      this.isPresenting = true;
-    },
-    hidePresenting() {
-      this.isPresenting = false;
-      window.cookieStore.set('hasVisited', 'true');
-    }
   },
 
   mounted() {
-    const hasCookie = window.cookieStore.get('hasVisited');
+    // Calculate 1vh value in pixels
+    // based on window inner height
+    var vh = window.innerHeight * 0.01;
 
-    hasCookie.then((cookie) => {
-      this.isLoading = false;
-      let hasVisited = cookie?.value === 'true';
-      if(!hasVisited) {
-        this.showPresenting();
-      }
-    }).catch((err) => {
-      console.error(err);
-    });
+    // Set the CSS variable to the root element
+    // Which is equal to 1vh
+    document.documentElement.style.setProperty('--vh', vh + 'px')
   }
 };
 </script>

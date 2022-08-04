@@ -93,7 +93,7 @@ export default {
   min-height: 50vh;
   width: 800px;
   background: #fff;
-  border: 2px solid var(--companyColor);
+  border: 10px solid var(--companyColor);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -109,8 +109,8 @@ export default {
   border-radius: 50%;
   cursor: pointer;
   position: absolute;
-  right: -15px;
-  top: -15px;
+  right: -20px;
+  top: -20px;
 
   transition: all 0.5s ease-in-out;
 }
@@ -152,5 +152,25 @@ export default {
 
 .experienceContent ul {
   margin-left: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .experienceViewer {
+    width: 100vw;
+    flex-direction: column;
+  }
+
+  .experienceViewer .companyLogo,
+  .experienceViewer .experienceContent {
+    width: auto;
+    font-size: 12px;
+  }
+
+  .experienceViewer .closeBtn{
+    top: -10px;
+    right: -10px;
+    border-radius : 0;
+  }
+
 }
 </style>

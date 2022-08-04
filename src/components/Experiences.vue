@@ -79,4 +79,17 @@ export default {
   flex-wrap: wrap;
   position: relative;
 }
+
+@media screen and (max-width:800px) {
+  .experienceWrapper {
+    width: 100vw;
+  }
+
+  .experiencesHeader{
+    font-size:30px;
+    width: 100%;
+    padding-left:20px;
+  }
+  
+}
 </style>

@@ -71,5 +71,11 @@ export default {
     padding: 80px 0;
     min-height: 100vh;
 }
+
+@media screen and (max-width: 800px){
+  .mainPage > div {
+    width: 100vw;
+  }
+}
 </style>
 
