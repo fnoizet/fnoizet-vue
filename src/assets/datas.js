@@ -390,8 +390,16 @@ const appDatas = {
       ]
     }
   ],
-  displayPostComponents : false,
+  displayPostComponents : true,
   work: [
+    {
+      code: "SudokuJS",
+      name: "ReactJS Sudoku game",
+      type: "website",
+      url: "https://sudokureactjs.netlify.app",
+      pic: "work_sudokujs.jpg",
+      display: true,
+    },
     {
       code: "CustomCheckbox",
       name: "Custom checkbox",
@@ -418,12 +426,13 @@ const appDatas = {
       name: "Fun with JS 2",
       type: "Graphics",
       pic: "work_funwithjs2.jpg",
-      display: true
+      display: false
     },
     {
       code: "VueComponent",
       name: "Vue Weather",
-      type: "dev",
+      type: "website",
+      url: "https://vuemeteowidget.netlify.app/",
       pic: "work_vuemeteo.jpg",
       display: true,
       linked_to: ["ReactComponent"]
@@ -433,7 +442,7 @@ const appDatas = {
       name: "React Weather",
       type: "dev",
       pic: "work_reactmeteo.jpg",
-      display: true,
+      display: false,
       linked_to: ["VueComponent"]
     },
     {
@@ -446,7 +455,8 @@ const appDatas = {
     {
       code: "FunWithJs",
       name: "Fun with JS",
-      type: "Graphics",
+      type: "website",
+      url: "https://movingbubbles.netlify.app/",
       pic: "work_funwithjs.jpg",
       display: true
     },

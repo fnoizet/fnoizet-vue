@@ -1,5 +1,9 @@
 <template>
   <div class="experiences" id="experiences">
+    <div class="experiencesBackground">
+      <div class="expbg_1"></div>
+      <div class="expbg_2"></div>
+    </div>
     <div class="experiencesHeader">
       <font-awesome-icon icon="fa-solid fa-briefcase" />
       Expériences
@@ -43,6 +47,21 @@ export default {
     }
   },
   mounted() {
+    const node = document.querySelector(".mainPage");
+    /* eslint-disable */
+    node.addEventListener("scroll", (e) => {
+      const pageScroll = e.target.scrollTop;
+      const wrapperPosition = document.querySelector('#experiences').offsetTop;
+      const wrapperHeight = document.querySelector('#experiences').offsetHeight;
+      let parallaxDivider = 5;
+      //(wrapperPosition + wrapperHeight) - pageScroll
+      const paralaxRate =  wrapperPosition - pageScroll + wrapperHeight - pageScroll*0.8;
+
+      document.querySelectorAll(".experiencesBackground div").forEach((el) => {
+         el.style.backgroundPosition = "0px "+(paralaxRate/(parallaxDivider))+"px"
+         parallaxDivider = parallaxDivider*3;
+      });
+    });
   },
 };
 </script>
@@ -54,6 +73,7 @@ export default {
   background-color: var(--lightgray);
   flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 .experiencesHeader {
@@ -67,6 +87,7 @@ export default {
     padding-bottom: 20px;
     position: relative;
     overflow: hidden;
+    z-index: 1;
 }
 
 .experiencesHeader a {
@@ -78,7 +99,31 @@ export default {
   display: flex;
   flex-wrap: wrap;
   position: relative;
+  z-index:1;
 }
+
+.experiencesBackground {
+  position:absolute;
+  top:0;
+  left:0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  background-color: var(--lightgray);
+  overflow: hidden;
+}
+
+.expbg_1, .expbg_2 {
+  position: absolute;
+  mix-blend-mode: multiply;
+  opacity:0.2;
+  height: 100%;
+  width: 100%;
+  background-repeat: repeat;
+}
+
+.expbg_1 {background-image: url('../assets/expbgcomp1.jpg');}
+.expbg_2 {background-image: url('../assets/expbgcomp2.jpg');}
 
 @media screen and (max-width:800px) {
   .experienceWrapper {

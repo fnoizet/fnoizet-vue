@@ -1,7 +1,7 @@
 <template>
   <div class="menu">
     <nav>
-      <a href="#home">Accueil</a>
+      <a href="#home"><font-awesome-icon icon="fa-solid fa-house" /></a>
       <a href="#about">A propos</a>
       <a href="#experiences">Expériences</a>
       <a href="#posts" v-if="appDatas.displayPostComponents">Posts</a>
@@ -18,7 +18,6 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .menu {
   margin: auto;
@@ -60,8 +59,9 @@ export default {
   }
 
   .menu nav a {
-    font-size:15px;
+    font-size:13px;
     line-height:60px;
+    padding:0 8px;
   }
 }
 </style>

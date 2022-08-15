@@ -16,10 +16,10 @@
         </div>
       </div>
       <div class="poweredBy">
-        Powered by
         <div class="logoVue" title="VueJs">
           <font-awesome-icon icon="fa-brands fa-vuejs" />
         </div>
+        2022
       </div>
     </div>
   </div>
@@ -38,7 +38,7 @@ export default {
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
-  background: linear-gradient(#333, #000 50%);
+  background: var(--primarydark) url('../assets/footer.png');
   color: #fff;
   font-size: 20px;
 }
@@ -51,6 +51,7 @@ export default {
   justify-content: space-evenly;
   z-index: 2;
   row-gap: 50px;
+  color: var(--primary);
 }
 
 .contactMeans {
@@ -58,16 +59,17 @@ export default {
   flex-direction: row;
   z-index: 2;
   column-gap: 50px;
+  margin-top: 50px;
 }
 
 .contactWrapper a {
-  color: #fff;
+  color: inherit;
   text-decoration: none;
   transition: color 0.2s linear;
 }
 
 .contactWrapper a:hover {
-  color: var(--secondary);
+  color: var(--primarydark);
 }
 
 .poweredBy {
@@ -80,7 +82,7 @@ export default {
 }
 
 @media screen and (max-width: 800px) {
-  .contactWrapper {
+  .contactMeans {
     flex-direction: column;
     gap: 10px;
   }

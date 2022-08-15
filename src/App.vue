@@ -45,6 +45,7 @@ export default {
   --darkgray: #333333;
   --lightgray: #EEE;
   --primary: #473BF0;
+  --primarydark: #090548;
   --secondary: #fd3;
   --tertiary: #598381;
 }
