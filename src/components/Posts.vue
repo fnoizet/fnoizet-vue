@@ -126,7 +126,17 @@ export default {
   overflow: auto;
 }
 
-@media screen and(max-width: 800px) {
+@media screen and (max-width:800px) {
+  .postsHeader {
+    font-size: 30px;
+    width: 100%;
+    padding-left: 20px;
+  }
+
+  .postsWrapper {
+    width: 100%;
+  }
+
   .articleContent {
     width: 100vw;
     padding: 5px;
