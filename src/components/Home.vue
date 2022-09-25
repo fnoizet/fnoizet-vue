@@ -18,9 +18,7 @@
   </div>
 </template>
 <script>
-/**
- * :icon="['fas', 'typewriter']"
- */
+
 export default {
   name: "HomeContent",
   methods: {

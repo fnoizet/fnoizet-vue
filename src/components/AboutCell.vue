@@ -79,20 +79,24 @@ export default {
 .aboutCell .text {
   transform: rotateY(0deg);
   opacity: 1;
+  visibility: visible;
 }
 
 .aboutCell .dots {
   transform: rotateY(180deg);
   opacity: 0;
+  visibility: hidden;
 }
 
 .aboutCell.revealDots .text {
   transform: rotateY(180deg);
   opacity: 0;
+  visibility: hidden;
 }
 
 .aboutCell.revealDots .dots {
   transform: rotateY(0deg);
   opacity: 1;
+  visibility: visible;
 }
 </style>

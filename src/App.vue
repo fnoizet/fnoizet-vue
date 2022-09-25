@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { appDatas } from "./assets/datas.js";
+import { appDatas } from "../public/datas.js";
 import MainPage from "./components/MainPage.vue";
 
 export default {

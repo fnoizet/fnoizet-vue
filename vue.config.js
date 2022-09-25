@@ -6,6 +6,6 @@ module.exports = defineConfig({
       // entry for the page
       entry: 'src/main.js',
       title: 'Fabien NOIZET - Développeur web - Scrum Master',
-    },
+    }
   }
 })
