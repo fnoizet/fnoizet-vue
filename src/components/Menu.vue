@@ -36,7 +36,6 @@ export default {
     }
   },
   mounted() {
-
     const anchors = [];
     document.querySelectorAll(".menu nav a").forEach(el => {
       const id = el.href.replace(document.location.origin+'/', '');
@@ -47,7 +46,6 @@ export default {
 
     const node = document.querySelector(".mainPage");
     node.addEventListener("scroll", () => {
-      console.log(node.scrollTop, anchors[1].offsetTop);
       let anchorCount = 0;
       anchors.forEach(anchor => {
         if (node.scrollTop > (anchor.offsetTop - window.innerHeight / 2)) {
