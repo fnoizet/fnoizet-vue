@@ -1,27 +1,31 @@
 <template>
   <div class="contact" id="contact">
+    <div class="socialLinks">
+      <a href="https://www.linkedin.com/in/fabien-noizet/" target="_blank">
+        <font-awesome-icon icon="fa-brands fa-linkedin" />
+      </a>
+      <a href="https://www.instagram.com/fabien.nzt/" target="_blank">
+        <font-awesome-icon icon="fa-brands fa-instagram" />
+      </a>
+      <a href="https://www.facebook.com/fabiennoizet" target="_blank">
+        <font-awesome-icon icon="fa-brands fa-facebook" />
+      </a>
+    </div>
     <div class="contactWrapper">
-      <div class="contactMeans">
-        <div class="contactMean">
-          <a href="https://www.linkedin.com/in/fabien-noizet/">
-            <font-awesome-icon icon="fa-brands fa-linkedin" />
-            Fabien NOIZET
-          </a>
-        </div>
-        <div class="contactMean">
-          <font-awesome-icon icon="fa-solid fa-at" /> fnoizet@gmail.com
-        </div>
-        <div class="contactMean">
-          <font-awesome-icon icon="fa-solid fa-phone" /> 06 62 98 73 54
-        </div>
+      <div class="aboutResume">
+        Développeur web Front-end et Back-end depuis 2005, j'apporte un
+        véritable savoir faire, et une écoute attentive pour vous aider à mener
+        à bien vos projets.
       </div>
-      <div class="poweredBy">
-        <div class="logoVue" title="VueJs">
-          <font-awesome-icon icon="fa-brands fa-vuejs" />
-        </div>
-        2022
+      <div class="contactMeans">
+        <span class="contactName">Fabien NOIZET</span><br/>
+        179 Corniche Fleurie, 06200 Nice<br/>
+        <font-awesome-icon icon="fa-solid fa-at" /> fnoizet@gmail.com<br/>
+        <font-awesome-icon icon="fa-solid fa-phone" /> 06 62 98 73 54
       </div>
     </div>
+    
+    <div class="SIREN">SIREN : 520 524 059</div>
   </div>
 </template>
 <script>
@@ -35,31 +39,37 @@ export default {
   position: relative;
   min-height: 0px !important;
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  background: var(--primarydark) url('../assets/footer.png');
-  color: #fff;
-  font-size: 20px;
+  background: #111;
+  color: var(--darkgray);
+  border-top: 1px solid #222;
+  font-size: 14px;
 }
 
 .contactWrapper {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 1000px;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-evenly;
   z-index: 2;
   row-gap: 50px;
-  color: var(--primary);
+  color: var(--lightgray);
+}
+
+.contactWrapper > div {
+  width: 300px;
 }
 
 .contactMeans {
-  display: flex;
-  flex-direction: row;
-  z-index: 2;
-  column-gap: 50px;
-  margin-top: 50px;
+  text-align: right;
+}
+
+.contactMeans .contactName {
+  font-size:20px;
+  font-weight: bold;
 }
 
 .contactWrapper a {
@@ -68,23 +78,41 @@ export default {
   transition: color 0.2s linear;
 }
 
-.contactWrapper a:hover {
-  color: var(--primarydark);
+.contactWrapper .aboutResume {
+  text-align: left;
 }
 
-.poweredBy {
-  font-size: 14px;
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 0 0 40px;
 }
 
-.logoVue {
-  color: #42b883;
-  font-size: 50px;
+.socialLinks a {
+  color: var(--secondary);
+  font-size:40px;
+  transition: all 0.2s linear;
+}
+
+.socialLinks a:hover {
+  margin:-5px 0 5px;
+}
+
+.SIREN {
+  margin: 40px 0 0 0;
 }
 
 @media screen and (max-width: 800px) {
-  .contactMeans {
+  .contactWrapper {
+    width: 100vw;
     flex-direction: column;
-    gap: 10px;
+    font-size: 15px;
+    padding: 0 40px;
+  }
+
+  .contactWrapper > div {
+    width: 100%;
   }
 }
 </style>

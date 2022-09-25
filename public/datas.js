@@ -421,7 +421,7 @@ const appDatas = {
       ]
     }
   ],
-  displayServices : false,
+  displayServices : true,
   work: [
     {
       code: "TodoList",
