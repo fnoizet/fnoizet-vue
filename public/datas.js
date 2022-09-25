@@ -53,12 +53,43 @@ const appDatas = {
   experiences: [
     {
       display: true,
+      companyLogoPath: "logo_preventeo.jpg",
+      bgcolor: "#FFF",
+      color: "#ec814c",
+      company: "Preventeo",
+      place: "Alpes-Martimes",
+      date: "03/2022 - aujourd'hui",
+      job: "Scrum Master",
+      desc:
+        "Dans une équipe d'une quinzaine de développeurs et testeurs, gestion Scrum et analyse technico-fonctionnelle",
+      desc2:
+        "Au sein du service IT d’une PME, avec une quinzaine de personnes (PO, développeurs, testeurs), assurer la gestion et le suivi de la méthodologie Scrum, mettre en place des KPI, et interagir avec les PO et DevTeam pour améliorer la qualité des demandes",
+      tasks: [
+        "Analyse technique et fonctionnelle",
+        "Remontée d'axes d'amélioration des process internes",
+        "Gestion de projet",
+        "Gestion Scrum",
+        "Mise en place de KPI",
+        "Affinage des besoins",
+        "Lien entre PO et développeurs"
+      ],
+      tags: [
+        "Analyse fonctionnelle",
+        "Scrum Master",
+        "ScrumBan",
+        "Agile",
+        "Documentation technique",
+        "Gestion d'&eacute;quipe"
+      ]
+    },
+    {
+      display: true,
       companyLogoPath: "logo_fdj.jpg",
       bgcolor: "#FFF",
       color: "#0097da",
       company: "FDJ",
       place: "Alpes-Martimes",
-      date: "05/2021 - aujourd'hui",
+      date: "05/2021 - 02/2022",
       job: "Lead technique / Scrum Master",
       desc:
         "Dans une équipe d'un dizaine de développeurs et testeurs, maintenance et évolutions des widgets Front Compte FDJ",
@@ -390,8 +421,16 @@ const appDatas = {
       ]
     }
   ],
-  displayPostComponents : true,
+  displayServices : false,
   work: [
+    {
+      code: "TodoList",
+      name: "A simple todolist in VueJS",
+      type: "website",
+      url: "https://mytodolist-vuejs.netlify.app",
+      pic: "work_todolistvue.jpg",
+      display: true,
+    },
     {
       code: "SudokuJS",
       name: "ReactJS Sudoku game",

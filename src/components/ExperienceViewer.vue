@@ -23,7 +23,7 @@
             {{ task }}
           </li>
         </ul>
-        <div class="listTitle">Environnement technique :</div>
+        <div class="listTitle" v-if="this.exp.techEnv">Environnement technique :</div>
         <ul>
           <li v-for="techno in this.exp.techEnv" :key="techno">
             {{ techno }}

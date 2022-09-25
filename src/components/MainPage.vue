@@ -5,6 +5,7 @@
     </div>
     <Home />
     <About />
+    <Services />
     <Experiences />
     <Posts />
     <Contact/>
@@ -18,9 +19,10 @@ import About from "./About.vue";
 import Experiences from "./Experiences.vue";
 import Posts from "./Posts.vue";
 import Contact from "./Contact.vue";
+import Services from "./Services.vue";
 
 export default {
-  components: { Menu, Home, About, Experiences, Posts, Contact },
+  components: { Menu, Home, About, Experiences, Posts, Contact, Services },
   mounted: () => {
     const node = document.querySelector(".mainPage");
     node.addEventListener("scroll", () => {
@@ -64,7 +66,7 @@ export default {
 }
 
 .menuWrapper.hidden {
-  top: -60px;
+  top: -65px;
 }
 
 .mainPage > div:not(:first-child) {
