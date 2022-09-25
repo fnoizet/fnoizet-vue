@@ -424,6 +424,14 @@ const appDatas = {
   displayServices : true,
   work: [
     {
+      code: "Wordle",
+      name: "Wordle Game with ReactJS",
+      type: "website",
+      url: "https://wordle.fabiennoizet.fr",
+      pic: "work_wordle.jpg",
+      display: true,
+    },
+    {
       code: "TodoList",
       name: "A simple todolist in VueJS",
       type: "website",
