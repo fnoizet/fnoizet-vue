@@ -48,7 +48,7 @@ jobs:
           server: ftp.cluster030.hosting.ovh.net
           username: ${{ secrets.OVH_FTP_USERNAME }}
           password: ${{ secrets.OVH_FTP_PASSWORD }}
-          server-dir: ./www_test/
+          server-dir: ./www/
           local-dir: ./dist/
 
       # Runs a set of commands using the runners shell
