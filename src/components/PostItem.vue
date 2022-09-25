@@ -67,6 +67,7 @@ export default {
   .postItem .name {
     top: 0px;
     width: auto;
+    font-size: 12px;
   }
 }
 </style>
