@@ -7,7 +7,7 @@
     <div class="experiencesHeader">
       <font-awesome-icon icon="fa-solid fa-briefcase" />
       Expériences
-      <a href="/Fabien_NOIZET_CV.pdf" target="_blank">
+      <a href="https://api.fabiennoizet.fr/datas/pdf/" target="_blank">
         <font-awesome-icon icon="fa-solid fa-file-pdf" />
       </a>
     </div>

@@ -1,25 +1,43 @@
 <template>
   <div class="appWrapper">
-      <main-page />
+      <main-page v-if="loaded"/>
+      <loading v-if="!loaded"/>
   </div>
 </template>
 
 <script>
-import { appDatas } from "../public/datas.js";
+import {computed} from "vue";
 import MainPage from "./components/MainPage.vue";
+import Loading from "./components/Loading.vue";
 
 export default {
   name: "App",
+  data: () => {
+    return {
+      loaded: false,
+      apiDatas: {}
+    };
+  },
   provide() {
     return {
-      appDatas,
+      appDatas: computed(() => {
+        return this.apiDatas
+      }),
     };
   },
   components: {
     MainPage,
+    Loading
   },
 
   mounted() {
+    fetch("https://api.fabiennoizet.fr/datas/json")
+    .then(res => res.json())
+    .then(data => {
+      this.apiDatas = data;
+      this.loaded = true;
+    });
+    
     // Calculate 1vh value in pixels
     // based on window inner height
     var vh = window.innerHeight * 0.01;
