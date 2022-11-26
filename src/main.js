@@ -18,4 +18,7 @@ library.add(fab);
 library.add(far);
 
 /* add font awesome icon component */
-createApp(App).component('font-awesome-icon', FontAwesomeIcon).mount('#app')
+const app = createApp(App)
+app.config.unwrapInjectedRef = true
+app.component('font-awesome-icon', FontAwesomeIcon).mount('#app');
+
