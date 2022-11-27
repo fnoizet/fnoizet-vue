@@ -31,7 +31,7 @@ export default {
   },
 
   mounted() {
-    fetch("https://api.fabiennoizet.fr/datas/json")
+    fetch(process.env.VUE_APP_API_URL+"/datas/json")
     .then(res => res.json())
     .then(data => {
       this.apiDatas = data;
