@@ -7,7 +7,7 @@
     <div class="experiencesHeader">
       <font-awesome-icon icon="fa-solid fa-briefcase" />
       Expériences
-      <a href="https://api.fabiennoizet.fr/datas/pdf/" target="_blank">
+      <a :href="pdf_url" target="_blank">
         <font-awesome-icon icon="fa-solid fa-file-pdf" />
       </a>
     </div>
@@ -26,11 +26,13 @@
 <script>
 import ExperienceItem from "./ExperienceItem.vue";
 import ExperienceViewer from "./ExperienceViewer.vue";
+
 export default {
   name: "ExperiencePage",
   data() {
     return {
-        selectedExp : null
+        selectedExp : null,
+        pdf_url: process.env.VUE_APP_API_URL+"/datas/pdf/"
     }
   },
   inject: ["appDatas"],
